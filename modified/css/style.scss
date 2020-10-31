@@ -1,0 +1,146 @@
+// ==================
+// Global styling
+// ==================
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #acccfc;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    text-align: center;
+    font-weight: 400;
+    border-bottom: 5px outset black;
+    box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.5);
+
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+}
+
+h1 {
+    margin: auto; 
+    // text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 260px;
+}
+
+header {
+    min-width: 260px;
+}
+
+// ==================
+// Navigation / filterbar styling
+// ==================
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    min-width: 260px;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.navlist {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+    align-items: baseline;
+    width: 100%;
+    &__item {
+        display: inline-block;
+    }
+    &__item:hover {
+        cursor: pointer;
+    }
+    & p {
+        display: inline-block;;
+    }
+}
+
+// ==================
+// Input form styling
+// ==================
+
+.form {
+    box-shadow: 0px 2px 5px rgba($color: #000000, $alpha: 0.5);
+    width: 260px; 
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+
+    text-align: center;
+
+    &__input {
+        margin: 0 auto;
+        width: 200px;
+    }
+    &__button {
+        background-color: transparent;
+        border: 0;
+        font-size: 1.2rem;
+        &:focus {
+            outline: green;
+        }
+    }
+}
+
+// ==================
+// Task list styling
+// ==================
+
+.tasklist {
+    margin: 0 10px;
+    width: 260px;
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
+    }
+    &__label {
+        width: 100%;
+        justify-self: start;
+        padding: 0 5px;
+    }
+    &__input {
+        @extend .tasklist__label;
+        display: inline;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        background-color: rgba($color: #ffffff, $alpha: 0.5);
+        border: 0;
+        outline: none;
+    }
+    &__button {
+        @extend .form__button;
+    }
+}
+
+// ==================
+// Messagebox styling
+// ==================
+
+.messages {
+    @extend .form;
+    font-size: 0.8rem;
+}
+
+// ==================
+// Generic classes
+// ==================
+
+.checked {
+    text-decoration: line-through;
+}

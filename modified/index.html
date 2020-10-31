@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <!-- FONT AWSOME -->
+    <script src="https://kit.fontawesome.com/b5be2595a0.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- OWN STYLESHEET -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script defer src="./src/api-client.js"></script>
+    <script defer src="./src/script.js"></script>
+
+    <title>TODO List</title>
+</head>
+<body>
+    <header id="header">
+        <h1 class="title">
+            To-Do lijst
+        </h1>
+    </header>
+
+    <nav class="navigation" id="navigation">
+        <span>Sorteer op:</span>
+        <ul id="navlist" class="navlist">
+            <li class="navlist__item" data-sortby="datecreate">
+                <p>Datum van invoer</p>
+            </li>
+            <li class="navlist__item" data-sortby="dateupdate">
+                <p>Datum van wijziging</p>
+            </li>
+            <li class="navlist__item" data-sortby="alphabet">
+                <p>Alfabet</p>
+            </li>
+            <li class="navlist__item" data-sortby="checked">
+                <p>Afgevinkt</p>
+            </li>
+            <li>
+                <i class="far fa-2x fa-arrow-alt-circle-down" data-asc="ascending"></i>
+                <i class="fas fa-2x fa-arrow-alt-circle-up" data-asc="descending"></i>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <div class="form"> 
+            <label for="inputTask">Welke taak wil je toevoegen</label>
+            <div>
+                <input class="form__input" type="text" id="inputTask" name="newTask" placeholder="Taakomschrijving" />
+                <input type="hidden" id="changeLabel" value="true">
+                <input type="hidden" id="sortOrder" value="ascending" />
+                <input type="hidden" id="sortBy" value="datecreate" />
+                <button class="form__button" id="addTask"><i class="fas fa-plus-circle"></i></button>
+            </div>
+        </div>
+
+        <div id="messages" class="messages">
+            <p>
+
+            </p>
+        </div>
+        
+        <ul class="tasklist" id="tasklist">
+        
+        </ul>
+    </main>
+</body>
+</html>

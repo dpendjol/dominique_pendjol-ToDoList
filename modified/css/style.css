@@ -1,0 +1,151 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #acccfc;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  text-align: center;
+  font-weight: 400;
+  border-bottom: 5px outset black;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  padding: 2rem 0;
+}
+
+h1 {
+  margin: auto;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 260px;
+}
+
+header {
+  min-width: 260px;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 260px;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.navlist {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 0.8rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  width: 100%;
+}
+
+.navlist__item {
+  display: inline-block;
+}
+
+.navlist__item:hover {
+  cursor: pointer;
+}
+
+.navlist p {
+  display: inline-block;
+}
+
+.form, .messages {
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  width: 260px;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.form__input {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.form__button, .tasklist__button {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.2rem;
+}
+
+.form__button:focus, .tasklist__button:focus {
+  outline: green;
+}
+
+.tasklist {
+  margin: 0 10px;
+  width: 260px;
+}
+
+.tasklist__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px 0;
+}
+
+.tasklist__label, .tasklist__input {
+  width: 100%;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  padding: 0 5px;
+}
+
+.tasklist__input {
+  display: inline;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0;
+  outline: none;
+}
+
+.messages {
+  font-size: 0.8rem;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=style.css.map */
