@@ -245,23 +245,6 @@ const sortTodoTasks = (tasks, asc='') => {
     return sortedTasks;
 } 
 
-/** Load al nessary data
- * 
- * @param {String} finalUrl 
- */
-const loadContentInfo = (finalUrl=url) => {
-    container.innerHTML = '';
-
-    getDataFromApi(finalUrl).then(datas => {
-            
-        // const sortedData = sortTodoTasks(datas, whatToSortBy, asc);
-
-        datas.forEach(data => {
-            addToDomList(data);
-        });
-    });
-}
-
 const sortClickHandler = (e) => {
     let switchMain = e.target.parentElement.dataset.sortby;
     let switchSub = e.target.dataset.asc;
@@ -329,11 +312,15 @@ const displaySorted = (switchMain, switchSub) => {
         default:
             returnUrl = url;
     }
-    if (switchMain !== 'alphabet') {
-        loadContentInfo(returnUrl);
-    }
+    clearDom()
+    getDataFromApi(returnUrl).then(tasks => {   
+        if (switchMain === 'alphabet') tasks = sortTodoTasks(tasks, asc);
+        tasks.forEach(data => {
+            addToDomList(data);
+        });
+    });
 
-    displayMessage(`Gesorteerd op ${messageBy} in ${messageOrder} volgorde.`)
+    displayMessage(`Gesorteerd op ${messageBy} in ${messageOrder} volgorde.`);
 }
 
 /** Display message in messagebox
