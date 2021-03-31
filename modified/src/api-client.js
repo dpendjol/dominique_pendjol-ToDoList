@@ -1,4 +1,4 @@
-const url = process.env.API_URL;
+const url = "http://167.71.73.113/api";
 
 
 /** Gets data from API, returns it in JSON format
