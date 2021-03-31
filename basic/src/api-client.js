@@ -1,4 +1,4 @@
-const url = "http://167.71.73.113/api";
+const url = "https://167.71.73.113/api";
 
 
 /** Gets data from API, returns it in JSON format
