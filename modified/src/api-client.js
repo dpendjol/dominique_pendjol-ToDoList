@@ -1,4 +1,4 @@
-const url = 'https://jsonbox.io/box_1f93510748e54f7b62b4';
+const url = process.env.API_URL;
 
 
 /** Gets data from API, returns it in JSON format
